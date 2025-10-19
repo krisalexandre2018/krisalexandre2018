@@ -18,11 +18,7 @@
 
 ## 🐍 Contribuições no GitHub
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/krisalexandre2018/krisalexandre2018/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/krisalexandre2018/krisalexandre2018/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/krisalexandre2018/krisalexandre2018/output/github-contribution-grid-snake.svg">
-</picture>
+![Snake animation](https://github.com/krisalexandre2018/krisalexandre2018/blob/output/github-contribution-grid-snake.svg)
 
 ## 🛠️ Tecnologias e Ferramentas
 

@@ -16,6 +16,7 @@
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=krisalexandre2018&layout=compact&theme=radical&bg_color=0D1117&title_color=FFFFFF&text_color=CCCCCC"/>
 </p>
 
+
 ## 🐍 Contribuições no GitHub
 
 ![Snake animation](https://github.com/krisalexandre2018/krisalexandre2018/blob/output/github-contribution-grid-snake.svg)

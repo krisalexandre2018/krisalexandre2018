@@ -1,0 +1,73 @@
+{
+  "github": {
+    "username": "krisalexandre2018",
+    "token": "${GITHUB_TOKEN}"
+  },
+  "profile": {
+    "language": "pt-br",
+    "full_name": "Kristian Alexandre Da Silva",
+    "display_name": "Kristian Alexandre",
+    "custom_info": {
+      "work_focus": "HTML5, CSS3, JavaScript e Python",
+      "learning": "React, PHP, C++ e Flutter",
+      "collaboration": "desenvolvimento web",
+      "looking_for": "IA e Agentes de IA",
+      "ask_me_about": "desenvolvimento front-end, HTML, CSS, JavaScript",
+      "career_goal": "Tornar-me desenvolvedor full stack",
+      "current_level": "Atualmente focado em front-end",
+      "pronouns": "ele/dele",
+      "work_focus_en": "HTML5, CSS3, JavaScript and Python",
+      "learning_en": "React, PHP, C++ and Flutter",
+      "collaboration_en": "web development",
+      "looking_for_en": "AI and AI Agents",
+      "ask_me_about_en": "front-end development, HTML, CSS, JavaScript",
+      "pronouns_en": "he/him"
+    },
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "React",
+      "PHP",
+      "C++",
+      "Flutter",
+      "Git",
+      "VS Code"
+    ],
+    "linkedin_url": "https://www.linkedin.com/in/kristian-alexandre-94442018a/",
+    "include_stats": true,
+    "include_snake": true
+  },
+  "projects": {
+    "featured_count": 6,
+    "min_stars_for_showcase": 0
+  },
+  "documentation": {
+    "include_screenshots": true,
+    "generate_english_version": false,
+    "create_changelog": true,
+    "create_contributing": true
+  },
+  "engagement": {
+    "activity_period_days": 30,
+    "weekly_report": true,
+    "linkedin_posts": true
+  },
+  "insights": {
+    "generate_weekly": true,
+    "track_growth": true,
+    "compare_with_community": true
+  },
+  "quality": {
+    "check_structure": true,
+    "suggest_improvements": true,
+    "create_workflows": true
+  },
+  "automation": {
+    "auto_update_profile": true,
+    "update_frequency": "weekly",
+    "auto_generate_reports": true,
+    "report_frequency": "weekly"
+  }
+}

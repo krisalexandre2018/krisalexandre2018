@@ -1,0 +1,68 @@
+name: Weekly Report Generator
+
+on:
+  schedule:
+    # Executa todo domingo às 20h (UTC)
+    - cron: '0 20 * * 0'
+
+  workflow_dispatch:
+
+jobs:
+  generate-weekly-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Generate Weekly Reports
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "📊 Generating weekly reports..."
+          python main.py --agent engagement
+          python main.py --agent insights
+
+      - name: Create Issue with Weekly Report
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+
+            // Lê o relatório semanal
+            let weeklyReport = '';
+            try {
+              weeklyReport = fs.readFileSync('WEEKLY_SUMMARY.md', 'utf8');
+            } catch (err) {
+              weeklyReport = '❌ Erro ao gerar relatório semanal';
+            }
+
+            // Cria issue com o relatório
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `📊 Relatório Semanal - ${new Date().toLocaleDateString('pt-BR')}`,
+              body: weeklyReport,
+              labels: ['report', 'automated']
+            });
+
+      - name: Upload Reports as Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: weekly-reports
+          path: |
+            WEEKLY_SUMMARY.md
+            ENGAGEMENT_REPORT.md
+            INSIGHTS_DASHBOARD.md
+          retention-days: 30
